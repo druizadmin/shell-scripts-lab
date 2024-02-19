@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Set the cache timeout (in seconds)
+cache_timeout=3600
+
+# Set up Git to use the credential helper
+git config credential.helper store
+git config credential.helper 'cache --timeout=$cache_timeout'
+
 # Change to your repository directory
 cd /home/sc/shell-scripts-lab/scripts
 
